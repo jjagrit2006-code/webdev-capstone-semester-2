@@ -1,0 +1,81 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  height: 60px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.links a {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.4rem 0.875rem;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.links a:hover {
+  color: var(--text-primary);
+  background: var(--bg-card2);
+}
+
+.links a.active {
+  color: var(--accent);
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.themeBtn {
+  font-size: 1rem;
+  padding: 0.4rem 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .navbar { padding: 0 1rem; gap: 1rem; }
+  .links a { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
+  .brandName { font-size: 1rem; }
+}
